@@ -103,7 +103,7 @@ const About = () => {
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
-        inherit="hidden"
+        initial="hidden"
         animate="show"
         exit="hidden"
         className="hidden xl:flex absolute bottom-0 -left-[370px]"
@@ -114,7 +114,7 @@ const About = () => {
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
-            inherit="hidden"
+            initial="hidden"
             animate="show"
             exit="hidden"
             className="h2"
@@ -124,7 +124,7 @@ const About = () => {
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
-            inherit="hidden"
+            initial="hidden"
             animate="show"
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
@@ -135,7 +135,7 @@ const About = () => {
           </motion.p>
           <motion.div
             variants={fadeIn("right", 0.6)}
-            inherit="hidden"
+            initial="hidden"
             animate="show"
             exit="hidden"
             className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
@@ -178,7 +178,7 @@ const About = () => {
         </div>
         <motion.div
           variants={fadeIn("left", 0.2)}
-          inherit="hidden"
+          initial="hidden"
           animate="show"
           exit="hidden"
           className="flex flex-col w-full xl:max-w-[48%] h-[480px] "
