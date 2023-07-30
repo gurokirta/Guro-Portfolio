@@ -18,7 +18,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 text-white"
           >
             Transforming Ideas <br /> Into{" "}
             <span className="text-accent">Digital Reality</span>
@@ -28,11 +28,11 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 sm:mt-16"
           >
-            Using Lorem ipsum to focus attention on graphic elements in a
-            webpage design proposal · One of the earliest examples of the Lorem
-            ipsum placeholder text on 1960s advertising
+            Hi, I`nam a Junior Front-end React Web Developer.Enthusiastic about
+            creating seamless user experiences. Eager to contribute and grow in
+            exciting web projects.
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />

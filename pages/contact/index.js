@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
 const Contact = () => {
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
   return (
     <div className="h-full bg-primary/30">
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
@@ -14,7 +18,7 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-12"
+            className="h2 text-center mb-12 text-white"
           >
             Let`s <span className="text-accent">connect.</span>
           </motion.h2>
@@ -31,7 +35,10 @@ const Contact = () => {
             </div>
             <input type="text" placeholder="subject" className="input" />
             <textarea placeholder="message" className="textarea"></textarea>
-            <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group ">
+            <button
+              onClick={e => handleSubmit(e)}
+              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group "
+            >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let`s Talk
               </span>

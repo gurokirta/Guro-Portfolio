@@ -2,7 +2,6 @@
 import {
   HiHome,
   HiUser,
-  HiRectangleGroup,
   HiViewColumns,
   HiChatBubbleBottomCenterText,
   HiEnvelope,
@@ -11,7 +10,6 @@ import {
 export const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
   { name: "work", path: "/work", icon: <HiViewColumns /> },
   {
     name: "testimonials",
@@ -41,7 +39,7 @@ const Nav = () => {
               href={link.path}
               key={index}
               className={`${
-                link.path === pathname && "text-accent"
+                link.path === pathname ? "text-accent" : "text-white"
               } relative flex items-center group hover:text-accent transition-all duration-300`}
             >
               <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
