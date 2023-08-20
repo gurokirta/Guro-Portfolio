@@ -1,13 +1,6 @@
 import Link from "next/link";
 
-import {
-  RiGithubLine,
-  RiLinkedinFill,
-  RiFile2Fill,
-  RiFile3Fill,
-  RiFile4Fill,
-  RiFileExcel2Fill,
-} from "react-icons/ri";
+import { RiGithubLine, RiLinkedinFill } from "react-icons/ri";
 
 import { AiFillFileText } from "react-icons/ai";
 
