@@ -1,48 +1,48 @@
 // data
-const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-      ],
-    },
-  ],
-};
+// const workSlides = {
+//   slides: [
+//     {
+//       images: [
+//         {
+//           title: "title",
+//           path: "/thumb1.jpg",
+//         },
+//         {
+//           title: "title",
+//           path: "/thumb2.jpg",
+//         },
+//         {
+//           title: "title",
+//           path: "/thumb3.jpg",
+//         },
+//         {
+//           title: "title",
+//           path: "/thumb4.jpg",
+//         },
+//       ],
+//     },
+//     {
+//       images: [
+//         {
+//           title: "title",
+//           path: "/thumb4.jpg",
+//         },
+//         {
+//           title: "title",
+//           path: "/thumb1.jpg",
+//         },
+//         {
+//           title: "title",
+//           path: "/thumb2.jpg",
+//         },
+//         {
+//           title: "title",
+//           path: "/thumb3.jpg",
+//         },
+//       ],
+//     },
+//   ],
+// };
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -65,7 +65,7 @@ const WorkSlider = () => {
       modules={[Pagination]}
       className="h-[280px] sm:h-[480px]"
     >
-      {workSlides.slides.map((slide, index) => {
+      {/* {workSlides.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
@@ -96,7 +96,7 @@ const WorkSlider = () => {
             </div>
           </SwiperSlide>
         );
-      })}
+      })} */}
     </Swiper>
   );
 };
