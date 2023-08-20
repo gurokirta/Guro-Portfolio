@@ -8,7 +8,12 @@ import { fadeIn } from "../../variants";
 import CountUp from "react-countup/";
 
 import { FaHtml5, FaCss3, FaJs, FaReact } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiRedux,
+} from "react-icons/si";
 //  data
 export const aboutData = [
   {
@@ -23,6 +28,8 @@ export const aboutData = [
           <SiTypescript />,
           <FaReact />,
           <SiNextdotjs />,
+          <SiTailwindcss />,
+          <SiRedux />,
         ],
       },
     ],
@@ -56,7 +63,6 @@ export const aboutData = [
   },
 ];
 
-import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 
 const About = () => {
@@ -64,15 +70,7 @@ const About = () => {
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
-      <motion.div
-        variants={fadeIn("right", 0.2)}
-        initial="hidden"
-        animate="show"
-        exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
-      >
-        <Avatar />
-      </motion.div>
+
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row">
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
