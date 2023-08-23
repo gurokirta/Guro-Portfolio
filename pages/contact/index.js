@@ -3,10 +3,43 @@ import { BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 import { fadeIn } from "../../variants";
+import { useState } from "react";
+import { sendContactForm } from "../lib/api";
+
+const initialValue = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
+const initialState = { values: initialValue };
 
 const Contact = () => {
-  const handleSubmit = e => {
-    e.preventDefault();
+  const [state, setState] = useState(initialState);
+
+  const { values, error } = state;
+
+  const handleChange = ({ target }) => {
+    setState(prev => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
+  };
+
+  const handleSubmit = async e => {
+    try {
+      await sendContactForm(values);
+      setState(initialState);
+    } catch (error) {
+      setState(prev => ({
+        ...prev,
+        error: error.message,
+      }));
+    }
   };
 
   return (
@@ -23,8 +56,6 @@ const Contact = () => {
             Let`s <span className="text-accent">connect.</span>
           </motion.h2>
           <motion.form
-            action="https://formsubmit.co/el/kubava"
-            method="POST"
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
@@ -34,12 +65,18 @@ const Contact = () => {
             <div className="flex gap-x-6 w-full">
               <input
                 type="text"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
                 placeholder="name"
                 required
                 className="input text-white"
               />
               <input
                 type="email"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
                 placeholder="email"
                 required
                 className="input text-white"
@@ -47,18 +84,23 @@ const Contact = () => {
             </div>
             <input
               type="text"
+              name="subject"
+              value={values.subject}
+              onChange={handleChange}
               required
               placeholder="subject"
               className="input text-white"
             />
             <textarea
               placeholder="message"
+              name="message"
+              value={values.message}
+              onChange={handleChange}
               required
               className="textarea text-white"
-            ></textarea>
+            />
             <button
               onClick={e => handleSubmit(e)}
-              type="submit"
               className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group "
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 text-white">
